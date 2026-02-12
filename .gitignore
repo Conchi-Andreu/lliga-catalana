@@ -1,0 +1,37 @@
+# Node modules
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Project specific
+*.json
+!README.md
+!*.js
+!*.html
+!*.css
+!*.txt
+
+# Exclude existing large JSON data files if they are just samples
+acta_27987.json
+c_clubs_no_xml.json
+c_clubs_xml.json
+clubs.json
+clubs_actius.json
+clubs_data_guess.json
+dades_clubs.json
+form_data.json
+get_clubs.json
+llista_clubs.json
+sample_calendar_group.json
+sample_classification.json
+sant_marti_calendar.json
+sant_marti_info.json
+
+# Keep important JS and assets
+*.js
+*.html
+*.css
+*.md
+*.txt
