@@ -1,0 +1,41 @@
+Especificación Técnica: Consultor de Actas Lliga Catalana
+1. Introducción
+El objetivo es crear una herramienta que permita a los usuarios consultar los resultados
+específicos de los jugadores de un equipo en la Lliga Catalana, filtrando por temporada y club.
+La aplicación debe limpiar la información para mostrar únicamente a los jugadores que
+efectivamente disputaron partidas.
+2. Análisis de Origen de Datos (Web FCE)
+La URL de referencia ( https://escacs.cat/index.php/component/fce?op=20 ) utiliza
+parámetros de consulta para determinar la temporada ( idTemp ) y el club.
+Estructura de la URL: ...&idTemp=2026&idClub=XXX
+Componentes clave:
+Selector de Temporada: Un select con los años disponibles.
+Selector de Equipo: Un buscador o desplegable de clubes federados.
+Actas de Encuentro: Tablas HTML que contienen los emparejamientos por ronda.
+3. Requerimientos Funcionales
+RF1: Selección de Parámetros: Desplegable para el año (Temporada) y un campo de
+selección para el Equipo/Club.
+RF2: Extracción de Datos: El sistema debe navegar o realizar el scraping de las rondas del
+equipo seleccionado.
+RF3: Filtrado de Jugadores: Solo se incluirán en el informe final aquellos jugadores que
+tengan un resultado registrado en la ronda (victoria, tablas, derrota o incomparecencia
+activa).
+RF4: Generación de Informe: Una tabla consolidada con las siguientes columnas:
+Ronda: Número de la jornada.
+Tablero: Posición en el encuentro (1 al 10, según categoría).
+Nombre del Jugador: Nombre completo según acta.
+Orden de Fuerza: Número de lista de entrada del jugador.
+Título: Título FIDE/FCE (GM, IM, etc.).
+ELO: Puntuación de ranking actual.
+Resultado: Puntos obtenidos en la partida.
+4. Diseño de Interfaz (UI)
+Cabecera: Selectores de Año y Equipo.
+9/2/26, 19:38 Google Gemini
+https://gemini.google.com/app/ddb262beec8b3a73?hl=es-ES 1/2
+Botón de Acción: "Generar Informe".
+Área de Resultados: Tabla dinámica con scroll vertical y opción de exportación (opcional).
+5. Arquitectura Técnica Recomendada
+Para una implementación moderna y eficiente:
+Frontend: React o HTML5/JS con Tailwind CSS para el diseño.
+Lógica de Datos: Integración con la API interna de la FCE si estuviera disponible, o un
+parser de DOM para convertir las tablas HTML del componente fce en objetos JSON.

@@ -13,7 +13,7 @@ Thumbs.db
 !*.css
 !*.txt
 
-# Exclude existing large JSON data files if they are just samples
+# Exclude existing large JSON data files
 acta_27987.json
 c_clubs_no_xml.json
 c_clubs_xml.json
@@ -29,9 +29,9 @@ sample_classification.json
 sant_marti_calendar.json
 sant_marti_info.json
 
-# Keep important JS and assets
-*.js
-*.html
-*.css
-*.md
-*.txt
+# Ensure important files are NOT ignored
+!*.js
+!*.html
+!*.css
+!*.md
+!*.txt

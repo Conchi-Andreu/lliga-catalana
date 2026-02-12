@@ -1,0 +1,1937 @@
+
+<!DOCTYPE html>
+<html lang="ca-es" dir="ltr"
+	  class='com_fce j34 mm-hover'>
+
+<head>
+	  <base href="https://escacs.cat/index.php/component/fce" />
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <meta name="description" content="siito joo3" />
+  <meta name="generator" content="Joomla! - Open Source Content Management" />
+  <title>ca</title>
+  <link href="https://escacs.cat/index.php/component/fce/?op=20" rel="canonical" />
+  <link href="/templates/clava/favicon.ico" rel="shortcut icon" type="image/vnd.microsoft.icon" />
+  <link rel="stylesheet" href="https://escacs.cat/components/com_fce/styles/jqx.base.css" type="text/css" />
+  <link rel="stylesheet" href="https://escacs.cat/components/com_fce/styles/jqx.classic.css" type="text/css" />
+  <link rel="stylesheet" href="https://escacs.cat/components/com_fce/styles/smoothness/jquery-ui-1.10.0.custom.min.css" type="text/css" />
+  <link rel="stylesheet" href="https://escacs.cat/components/com_fce/styles/fce.css" type="text/css" />
+  <link rel="stylesheet" href="https://escacs.cat/components/com_fce/styles/select2.min.css" type="text/css" />
+  <link rel="stylesheet" href="/components/com_imageshow/assets/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/system/css/system.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/clava/css/legacy-grid.css" type="text/css" />
+  <link rel="stylesheet" href="/plugins/system/t3/base-bs3/fonts/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/clava/css/bootstrap.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/clava/css/template.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/clava/css/megamenu.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/clava/fonts/font-awesome/css/font-awesome.min.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/clava/css/magnific-popup.css" type="text/css" />
+  <link rel="stylesheet" href="/templates/clava/css/flat-ui.css" type="text/css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" type="text/css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:300,400,700" type="text/css" />
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700" type="text/css" />
+  <link rel="stylesheet" href="/templates/clava/css/home.css" type="text/css" />
+  <script src="/media/jui/js/jquery.min.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery-noconflict.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery-migrate.min.js" type="text/javascript"></script>
+  <script src="/plugins/system/t3/base-bs3/bootstrap/js/bootstrap.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery.ui.core.min.js" type="text/javascript"></script>
+  <script src="/media/jui/js/jquery.ui.sortable.min.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/gmvw20/js/d3.min.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/gmvw20/js/d3.legend.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxcore.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxdata.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/gmvw20/conn/dataAdapters.js.php" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxcalendar.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxcheckbox.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxnumberinput.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxdatetimeinput.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxdropdownlist.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxmenu.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxgrid.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxgrid.selection.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxgrid.columnsreorder.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxgrid.columnsresize.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxgrid.edit.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxgrid.filter.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxgrid.pager.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxgrid.sort.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxscrollbar.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxlistbox.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxtabs.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxtooltip.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxtouch.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxbuttons.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxgrid.grouping.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/globalization/globalize.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/globalization/globalize.culture.ca.js" type="text/javascript"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDPyZMCsJ4yedWtdVXYn2ZHzLaFqMVjVv0" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/gmvw20/js/gmdata260102.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxdata.export.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/jqxgrid.export.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/select2.min.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/i18n/en-gb.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/angular.min.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/angular-ui-router.min.js" type="text/javascript"></script>
+  <script src="https://escacs.cat/components/com_fce/js/angular-app/app.js" type="text/javascript"></script>
+  <script src="/plugins/system/t3/base-bs3/js/jquery.tap.min.js" type="text/javascript"></script>
+  <script src="/plugins/system/t3/base-bs3/js/script.js" type="text/javascript"></script>
+  <script src="/plugins/system/t3/base-bs3/js/menu.js" type="text/javascript"></script>
+  <script src="/templates/clava/js/jquery.easing.1.3.js" type="text/javascript"></script>
+  <script src="/templates/clava/js/jquery.fitvids.js" type="text/javascript"></script>
+  <script src="/templates/clava/js/jquery.bxslider.min.js" type="text/javascript"></script>
+  <script src="/templates/clava/js/jquery.magnific-popup.min.js" type="text/javascript"></script>
+  <script src="/templates/clava/js/jquery.quicksand.js" type="text/javascript"></script>
+  <script src="/templates/clava/js/jquery.BlackAndWhite.js" type="text/javascript"></script>
+  <script src="/templates/clava/js/script.js" type="text/javascript"></script>
+  <script src="/plugins/system/t3/base-bs3/js/nav-collapse.js" type="text/javascript"></script>
+
+	
+<!-- META FOR IOS & HANDHELD -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+	<style type="text/stylesheet">
+		@-webkit-viewport   { width: device-width; }
+		@-moz-viewport      { width: device-width; }
+		@-ms-viewport       { width: device-width; }
+		@-o-viewport        { width: device-width; }
+		@viewport           { width: device-width; }
+	</style>
+	<script type="text/javascript">
+		//<![CDATA[
+		if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+			var msViewportStyle = document.createElement("style");
+			msViewportStyle.appendChild(
+				document.createTextNode("@-ms-viewport{width:auto!important}")
+			);
+			document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+		}
+		//]]>
+	</script>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="apple-mobile-web-app-capable" content="YES"/>
+<!-- //META FOR IOS & HANDHELD -->
+
+
+
+
+<!-- Le HTML5 shim and media query for IE8 support -->
+<!--[if lt IE 9]>
+<script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<script type="text/javascript" src="/plugins/system/t3/base-bs3/js/respond.min.js"></script>
+<![endif]-->
+
+<!-- You can add Google Analytics here or use T3 Injection feature -->
+	<script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"a929e47344f6a3644bb133019d91b8aa"})});</script>
+
+<!-- BEGIN Advanced Google Analytics - http://deconf.com/advanced-google-analytics-joomla/ -->
+
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-34918509-1', 'auto');  
+  
+ga('require', 'displayfeatures');
+ga('send', 'pageview');
+</script>
+<!-- END Advanced Google Analytics -->
+
+
+</head>
+
+<body>
+
+<div class="t3-wrapper"> <!-- Need this wrapper for off-canvas menu. Remove if you don't use of-canvas -->
+
+    
+<div id="preloader">
+	<div id="status"></div>
+</div>
+
+<!-- HEADER -->
+<header id="t3-header" class="navbar navbar-default t3-header navbar-fixed-top navbar-collapse-fixed-top">
+	<div class="container">
+		<div class="row">
+
+			<!-- LOGO -->
+			<div class="col-xs-6 col-md-4 logo">
+				<div class="logo-image">
+					<a href="/" title="FCE">
+													<img class="logo-img" src="/images/logo_grisoscuro.png" alt="FCE" />
+																		<span>FCE</span>
+					</a>
+					<small class="site-slogan">FCE</small>
+				</div>
+			</div>
+			<!-- //LOGO -->
+
+						<div class="col-xs-6 col-md-8" style="width: 100%;">
+				<!-- MAIN NAVIGATION -->
+				<nav id="t3-mainnav" class="wrap t3-mainnav pull-right">
+
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+					
+																				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".t3-navbar-collapse">
+								<i class="fa fa-bars"></i>
+							</button>
+						
+						
+					</div>
+
+											<div class="t3-navbar-collapse navbar-collapse collapse"></div>
+					
+					<div class="t3-navbar navbar-collapse collapse">
+						<div  class="t3-megamenu animate fading"  data-duration="400" data-responsive="true">
+<ul class="nav navbar-nav level0">
+<li class="current active dropdown mega" data-id="435" data-level="1">
+<a class=" dropdown-toggle" href="/index.php"  title="Página d'inici"   data-target="#" data-toggle="dropdown">Inici <b class="caret"></b></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+</div></div>
+</li>
+<li class="dropdown mega" data-id="233" data-level="1">
+<span class=" dropdown-toggle separator"   data-target="#" data-toggle="dropdown"> Competició<b class="caret"></b></span>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level1">
+<li class="dropdown-submenu mega" data-id="484" data-level="2">
+<a class="" href="/index.php/competicio/competicions"   data-target="#">Calendari de Competicions </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level2">
+<li  data-id="1240" data-level="3">
+<a class="" href="/index.php/competicio/competicions/calendaris-oficial-fce"   data-target="#">Calendari Oficial FCE </a>
+
+</li>
+<li  data-id="1241" data-level="3">
+<a class="" href="/index.php/competicio/competicions/calendari-dt-barcelona"   data-target="#">Calendari DT Barcelona </a>
+
+</li>
+<li  data-id="1243" data-level="3">
+<a class="" href="/index.php/competicio/competicions/calendari-dt-girona"   data-target="#">Calendari DT Girona </a>
+
+</li>
+<li  data-id="1244" data-level="3">
+<a class="" href="/index.php/competicio/competicions/calendari-dt-tarragona"   data-target="#">Calendari DT Tarragona </a>
+
+</li>
+<li  data-id="1242" data-level="3">
+<a class="" href="/index.php/competicio/competicions/calendari-dt-lleida"   data-target="#">Calendari DT Lleida </a>
+
+</li>
+<li  data-id="1170" data-level="3">
+<a class="" href="https://escacs.cat/index.php/component/fce?op=5&amp;dates=0"   data-target="#">Properes Competicions</a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown-submenu mega" data-id="813" data-level="2">
+<a class="" href="/index.php/competicio/ciutat-barcelona"   data-target="#">Ciutat de Barcelona </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level2">
+<li  data-id="1184" data-level="3">
+<a class="" href="https://cotxeres-casinet.cat/escacs/"   data-target="#">Web Obert Internacional de Sants – Ciutat de Barcelona</a>
+
+</li>
+<li  data-id="819" data-level="3">
+<a class="" href="/index.php/competicio/ciutat-barcelona/edicio-2011" target="_blank"   data-target="#">Edicions anteriors </a>
+
+</li>
+<li  data-id="832" data-level="3">
+<a class="" href="/index.php/competicio/ciutat-barcelona/noticies-magistral"   data-target="#">Cròniques </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li  data-id="1106" data-level="2">
+<a class="" href="https://www.escacscircuit.cat"   data-target="#">Circuit Català</a>
+
+</li>
+<li  data-id="1194" data-level="2">
+<a class="" href="/index.php/competicio/lliga-catalana"   data-target="#">Lliga Catalana </a>
+
+</li>
+<li class="dropdown-submenu mega" data-id="779" data-level="2">
+<a class="" href="/index.php/competicio/escacs-base"   data-target="#">Escacs base </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level2">
+<li  data-id="817" data-level="3">
+<a class="" href="/index.php/competicio/escacs-base/noticies-descacs-base" target="_blank"   data-target="#">Notícies </a>
+
+</li>
+<li  data-id="839" data-level="3">
+<a class="" href="/index.php/competicio/escacs-base/circulars-escacs-de-base"   data-target="#">Circulars Escacs de Base </a>
+
+</li>
+<li class="dropdown-submenu mega" data-id="1279" data-level="3">
+<a class="" href="/index.php/competicio/escacs-base/escacs-base-2026"   data-target="#">Escacs base 2026 </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level3">
+<li  data-id="1280" data-level="4">
+<a class="" href="/index.php/competicio/escacs-base/escacs-base-2026/fases-previes-2026"   data-target="#">Fases prèvies 2026 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li  data-id="1275" data-level="3">
+<a class="" href="/index.php/competicio/escacs-base/croniques-edats"   data-target="#">Cròniques Edats </a>
+
+</li>
+<li  data-id="1003" data-level="3">
+<a class="" href="/index.php/competicio/escacs-base/escacs-base-2015"   data-target="#">Concentracions </a>
+
+</li>
+<li class="dropdown-submenu mega" data-id="787" data-level="3">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors"   data-target="#">Edicions anteriors </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level3">
+<li class="dropdown-submenu mega" data-id="1270" data-level="4">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2025"   data-target="#">Escacs base 2025 </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level4">
+<li  data-id="1271" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2025/campionat-de-catalunya-d-edats-2025"   data-target="#">Campionat de Catalunya d'edats 2025 </a>
+
+</li>
+<li  data-id="1272" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2025/fases-previes-2025"   data-target="#">Fases prèvies 2025 </a>
+
+</li>
+<li  data-id="1277" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2025/campionat-de-catalunya-d-equips-per-edats-2025"   data-target="#">Campionat de Catalunya d'Equips per Edats 2025 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown-submenu mega" data-id="1263" data-level="4">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2024"   data-target="#">Escacs Base 2024 </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level4">
+<li  data-id="1268" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2024/campionat-de-catalunya-d-edats-2024"   data-target="#">Campionat de Catalunya d'edats 2024 </a>
+
+</li>
+<li  data-id="1262" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2024/campionat-previes-2024"   data-target="#">Campionat prèvies 2024 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown-submenu mega" data-id="1245" data-level="4">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2023"   data-target="#">Escacs Base 2023 </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level4">
+<li  data-id="1261" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2023/campionat-de-catalunya-d-edats-2023"   data-target="#">Campionat de Catalunya d'edats per equips 2023 </a>
+
+</li>
+<li  data-id="1257" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2023/campionat-de-catalunya-d-edats-2024"   data-target="#">Campionat de Catalunya d'edats 2023 </a>
+
+</li>
+<li  data-id="1247" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2023/campionat-previes-2023"   data-target="#">Campionat prèvies 2023 </a>
+
+</li>
+<li  data-id="1259" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2023/campionat-de-seleccions-autonomiques-2023"   data-target="#">Campionat de Seleccions Autonòmiques 2023 </a>
+
+</li>
+<li  data-id="1260" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2023/croniques-salobrena-2023"   data-target="#">Cròniques Campionat d'Espanya d'edats 2023 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown-submenu mega" data-id="1224" data-level="4">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2022"   data-target="#">Escacs Base 2022 </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level4">
+<li  data-id="1239" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2022/campionat-de-catalunya-d-edats-2023"   data-target="#">Campionat de Catalunya d'edats per equips 2022 </a>
+
+</li>
+<li  data-id="1231" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2022/campionat-de-catalunya-d-edats-2022"   data-target="#">Campionat de Catalunya d'edats 2022 </a>
+
+</li>
+<li  data-id="1225" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2022/campionat-previes-2022"   data-target="#">Campionat prèvies 2022 </a>
+
+</li>
+<li  data-id="1233" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2022/campionat-de-seleccions-autonomiques-2022"   data-target="#">Campionat de Seleccions Autonòmiques 2022 </a>
+
+</li>
+<li  data-id="1234" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2022/croniques-salobrena-2022"   data-target="#">Cròniques Campionat d'Espanya d'edats 2022 (Salobreña) </a>
+
+</li>
+<li class="dropdown-submenu mega" data-id="1237" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2022/memorial-arturo-pomar-2022"   data-target="#">Memorial Arturo Pomar 2022 </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level5">
+<li  data-id="1236" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2022/memorial-arturo-pomar-2022/jugadors-memorial-arturo-pomar-sub-12-2022"   data-target="#">Jugadors Memorial Arturo Pomar Sub-12 2022 </a>
+
+</li>
+<li  data-id="1235" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2022/memorial-arturo-pomar-2022/jugadors-memorial-arturo-pomar-sub-10-2022"   data-target="#">Jugadors Memorial Arturo Pomar Sub-10 2022 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown-submenu mega" data-id="1212" data-level="4">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2021"   data-target="#">Escacs Base 2021 </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level4">
+<li  data-id="1216" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2021/campionat-de-catalunya-d-edats-2022"   data-target="#">Campionat de Catalunya d'edats per equips 2021 </a>
+
+</li>
+<li  data-id="1211" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2021/campionat-de-cat-d-edats-2021"   data-target="#">Campionat de Catalunya d'edats individual 2021 </a>
+
+</li>
+<li  data-id="1213" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2021/campionat-de-catalunya-d-edats-2021"   data-target="#">Campionat de Catalunya d'edats 2021 </a>
+
+</li>
+<li  data-id="1215" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2021/croniques-salobrena-2021"   data-target="#">Cròniques Salobreña 2021 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown-submenu mega" data-id="1185" data-level="4">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2020"   data-target="#">Escacs Base 2020 </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level4">
+<li  data-id="1208" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2020/campionat-de-catalunya-d-edats-2021"   data-target="#">Campionat de Catalunya d'edats per equips 2020 </a>
+
+</li>
+<li  data-id="1203" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2020/campionat-de-catalunya-d-edats-2020"   data-target="#">Campionat de Catalunya d'edats 2020 </a>
+
+</li>
+<li  data-id="1205" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2020/campionat-de-catalunya-d-edats-online-2020"   data-target="#">Campionat de Catalunya d'edats online 2020  </a>
+
+</li>
+<li  data-id="1186" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2020/campionat-previes-2018"   data-target="#">Campionat prèvies 2020 </a>
+
+</li>
+<li  data-id="1207" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2020/croniques-salobrena-2020"   data-target="#">Cròniques Salobreña 2020 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown-submenu mega" data-id="1162" data-level="4">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2019"   data-target="#">Escacs Base 2019 </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level4">
+<li  data-id="1167" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2019/campionat-de-catalunya-d-edats-2019"   data-target="#">Campionat de Catalunya d'edats 2019 </a>
+
+</li>
+<li  data-id="1176" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2019/campionat-de-seleccions-autonomiques-2019"   data-target="#">Campionat de Seleccions Autonòmiques 2019 </a>
+
+</li>
+<li  data-id="1177" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2019/croniques-salobrena-2019"   data-target="#">Cròniques Salobreña 2019 </a>
+
+</li>
+<li  data-id="1182" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2019/jugadors-4"   data-target="#">Jugadors Memorial Arturo Pomar Sub-10 2019 </a>
+
+</li>
+<li  data-id="1183" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2019/jugadors-5"   data-target="#">Jugadors Memorial Arturo Pomar Sub-12 2019 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown-submenu mega" data-id="1138" data-level="4">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2018"   data-target="#">Escacs Base 2018 </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level4">
+<li  data-id="1149" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2018/campionat-de-catalunya-d-edats-2018"   data-target="#">Campionat de Catalunya d'edats 2018 </a>
+
+</li>
+<li  data-id="1150" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2018/campionat-de-seleccions-autonomiques-2018"   data-target="#">Campionat de Seleccions Autonòmiques 2018 </a>
+
+</li>
+<li  data-id="1148" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2018/croniques-salobrena-2018"   data-target="#">Cròniques Salobreña 2018 </a>
+
+</li>
+<li  data-id="1159" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2018/campionat-de-catalunya-per-equips-d-edats-2"   data-target="#">Campionat de Catalunya per equips d'edats </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown-submenu mega" data-id="1117" data-level="4">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2017"   data-target="#">Escacs Base 2017 </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level4">
+<li  data-id="1118" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2017/campionat-previes-2017"   data-target="#">Campionat prèvies 2017 </a>
+
+</li>
+<li  data-id="1123" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2017/campionat-de-catalunya-d-edats-2017"   data-target="#">Campionat de Catalunya d'edats 2017 </a>
+
+</li>
+<li  data-id="1132" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2017/salobrena-2017"   data-target="#">Cròniques Salobreña 2017 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown-submenu mega" data-id="1053" data-level="4">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2016"   data-target="#">Escacs Base 2016 </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level4">
+<li  data-id="1054" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2016/campionat-previes-2016"   data-target="#">Campionat prèvies 2016 </a>
+
+</li>
+<li  data-id="1059" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2016/campionat-de-catalunya-d-edats-2016"   data-target="#">Campionat de Catalunya d'edats 2016 </a>
+
+</li>
+<li  data-id="1115" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2016/final-a-8-de-la-categoria-sub-12"   data-target="#">Final a 8 de la categoria sub-12 </a>
+
+</li>
+<li  data-id="1110" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2016/salobrena-2016"   data-target="#">Cròniques Salobreña 2016 </a>
+
+</li>
+<li  data-id="1048" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2016/croniques-s14-equips-espanya"   data-target="#">Cròniques S14 Equips Espanya </a>
+
+</li>
+<li  data-id="1116" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2016/campionat-de-catalunya-per-equips-d-edats"   data-target="#">Campionat de Catalunya per equips d'edats </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown-submenu mega" data-id="1007" data-level="4">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2015"   data-target="#">Escacs Base 2015 </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level4">
+<li  data-id="1008" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2015/campionat-previes-2015"   data-target="#">Campionat prèvies 2015 </a>
+
+</li>
+<li  data-id="1016" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2015/campionat-de-catalunya-d-edats-2015"   data-target="#">Campionat de Catalunya d'edats 2015 </a>
+
+</li>
+<li class="dropdown-submenu mega" data-id="1040" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2015/croniques-salobrena-2015"   data-target="#">Cròniques Salobreña 2015 </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level5">
+<li  data-id="1041" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2015/croniques-salobrena-2015/sub-8"   data-target="#">Sub-8 </a>
+
+</li>
+<li  data-id="1042" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2015/croniques-salobrena-2015/sub-10"   data-target="#">Sub-10 </a>
+
+</li>
+<li  data-id="1043" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2015/croniques-salobrena-2015/sub-12"   data-target="#">Sub-12 </a>
+
+</li>
+<li  data-id="1044" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2015/croniques-salobrena-2015/sub-14"   data-target="#">Sub-14 </a>
+
+</li>
+<li  data-id="1045" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2015/croniques-salobrena-2015/sub-16"   data-target="#">Sub-16 </a>
+
+</li>
+<li  data-id="1046" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2015/croniques-salobrena-2015/sub-18"   data-target="#">Sub-18 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li  data-id="904" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/base-2015/final-a-8-equips-de-la-categoria-sub-12"   data-target="#">Final a 8 equips de la categoria sub-12 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown-submenu mega" data-id="879" data-level="4">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2014"   data-target="#">Escacs Base 2014 </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level4">
+<li  data-id="880" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2014/rankings-i-rondes"   data-target="#">Rankings i rondes </a>
+
+</li>
+<li  data-id="881" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2014/fotografies"   data-target="#">Fotografies </a>
+
+</li>
+<li  data-id="882" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2014/area-tecnica"   data-target="#">Àrea tècnica </a>
+
+</li>
+<li  data-id="883" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2014/partides"   data-target="#">Partides </a>
+
+</li>
+<li  data-id="890" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2014/campionats-previes"   data-target="#">Campionats prèvies </a>
+
+</li>
+<li  data-id="889" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2014/classificats-previes"   data-target="#">Classificats prèvies </a>
+
+</li>
+<li class="dropdown-submenu mega" data-id="902" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2014/final-de-catalunya-de-sub-8-a-sub-18" target="_blank"   data-target="#">Final de Catalunya de sub-8 a sub-18 </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level5">
+<li  data-id="907" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2014/final-de-catalunya-de-sub-8-a-sub-18/partides"   data-target="#">Partides </a>
+
+</li>
+<li  data-id="908" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2014/final-de-catalunya-de-sub-8-a-sub-18/fotografies"   data-target="#">Fotografies </a>
+
+</li>
+<li class="dropdown-submenu mega" data-id="884" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2014/final-de-catalunya-de-sub-8-a-sub-18/activitats"   data-target="#">Activitats </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level6">
+<li  data-id="885" data-level="7">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2014/final-de-catalunya-de-sub-8-a-sub-18/activitats/concurs-de-puzzles"   data-target="#">Concurs de Puzzles </a>
+
+</li>
+<li  data-id="898" data-level="7">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2014/final-de-catalunya-de-sub-8-a-sub-18/activitats/campionat-de-rapides"   data-target="#">Campionat de ràpides </a>
+
+</li>
+<li  data-id="886" data-level="7">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2014/final-de-catalunya-de-sub-8-a-sub-18/activitats/concurs-de-fotografia"   data-target="#">Concurs de fotografia </a>
+
+</li>
+<li  data-id="887" data-level="7">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2014/final-de-catalunya-de-sub-8-a-sub-18/activitats/jocs-i-tallers"   data-target="#">Jocs i tallers </a>
+
+</li>
+<li  data-id="888" data-level="7">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2014/final-de-catalunya-de-sub-8-a-sub-18/activitats/tast-de-vins"   data-target="#">Tast de vins </a>
+
+</li>
+<li  data-id="900" data-level="7">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2014/final-de-catalunya-de-sub-8-a-sub-18/activitats/exposicio-de-dibuixos" target="_blank"   data-target="#">Exposició de dibuixos </a>
+
+</li>
+<li  data-id="903" data-level="7">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2014/final-de-catalunya-de-sub-8-a-sub-18/activitats/xerrada-qels-escacs-a-lescolaq" target="_blank"   data-target="#">Xerrada &quot;Els escacs a l'escola&quot; </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li  data-id="909" data-level="6">
+<a class="" href="http://www.escacs.cat/images/edats/Final%202014/Clas%20COPA%20PROMOCIO%202014.pdf" onclick="window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes');return false;"   data-target="#">Classificació Copa Promoció</a>
+
+</li>
+<li  data-id="910" data-level="6">
+<a class="" href="http://www.escacs.cat/images/edats/Final%202014/Clas%20JORDI%20PUIG%202014.pdf" onclick="window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes');return false;"   data-target="#">Classificació Memorial Jordi Puig</a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li  data-id="891" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2014/croniques-campionat-espanya"   data-target="#">Cròniques Campionat Espanya </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown-submenu mega" data-id="784" data-level="4">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2013"   data-target="#">Escacs Base 2013 </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level4">
+<li  data-id="794" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2013/ranquings-i-rondes"   data-target="#">Rànquings i rondes </a>
+
+</li>
+<li  data-id="793" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2013/fotografies"   data-target="#">Fotografies </a>
+
+</li>
+<li  data-id="792" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2013/area-tecnica"   data-target="#">Àrea Tècnica </a>
+
+</li>
+<li  data-id="791" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2013/partides"   data-target="#">Partides </a>
+
+</li>
+<li class="dropdown-submenu mega" data-id="804" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2013/activitats"   data-target="#">Activitats </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level5">
+<li  data-id="805" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2013/activitats/concurs-de-puzzles"   data-target="#">Concurs de Puzzles </a>
+
+</li>
+<li  data-id="806" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2013/activitats/concurs-de-fotografia"   data-target="#">Concurs de Fotografia </a>
+
+</li>
+<li  data-id="807" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2013/activitats/excursio"   data-target="#">Excursió </a>
+
+</li>
+<li  data-id="808" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2013/activitats/jocs-i-tallers"   data-target="#">Jocs i tallers </a>
+
+</li>
+<li  data-id="809" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2013/activitats/tast-de-vins"   data-target="#">Tast de vins </a>
+
+</li>
+<li  data-id="810" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2013/activitats/concert"   data-target="#">Concert </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li  data-id="790" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2013/joc-dequips-per-acompanyants"   data-target="#">Joc d'Equips per acompanyants </a>
+
+</li>
+<li  data-id="789" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2013/classificats-previes"   data-target="#">Classificats Prèvies </a>
+
+</li>
+<li  data-id="788" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2013/campionats-previes"   data-target="#">Campionats Prèvies </a>
+
+</li>
+<li class="dropdown-submenu mega" data-id="868" data-level="5">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2013/croniques-salobrena-20132"   data-target="#">Cròniques Salobreña 2013 </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level5">
+<li  data-id="869" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2013/croniques-salobrena-20132/campionat-despanya-sub-8-salobrena-2013" target="_blank"   data-target="#">Campionat d'Espanya Sub-8. Salobreña 2013 </a>
+
+</li>
+<li  data-id="870" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2013/croniques-salobrena-20132/campionat-despanya-sub-10-salobrena-2013" target="_blank"   data-target="#">Campionat d'Espanya Sub-10. Salobreña 2013 </a>
+
+</li>
+<li  data-id="871" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2013/croniques-salobrena-20132/campionat-despanya-sub-12-salobrena-2013" target="_blank"   data-target="#">Campionat d'Espanya Sub-12. Salobreña 2013 </a>
+
+</li>
+<li  data-id="872" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2013/croniques-salobrena-20132/campionat-despanya-sub-14-salobrena-2013" target="_blank"   data-target="#">Campionat d'Espanya Sub-14. Salobreña 2013 </a>
+
+</li>
+<li  data-id="873" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2013/croniques-salobrena-20132/campionat-despanya-sub-16-salobrena-2013" target="_blank"   data-target="#">Campionat d'Espanya Sub-16. Salobreña 2013 </a>
+
+</li>
+<li  data-id="874" data-level="6">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2013/croniques-salobrena-20132/campionat-despanya-sub-18-salobrena-2013" target="_blank"   data-target="#">Campionat d'Espanya Sub-18. Salobreña 2013 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li  data-id="783" data-level="4">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2012"   data-target="#">Escacs Base 2012 </a>
+
+</li>
+<li  data-id="782" data-level="4">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2011"   data-target="#">Escacs Base 2011 </a>
+
+</li>
+<li  data-id="781" data-level="4">
+<a class="" href="/index.php/competicio/escacs-base/edicions-anteriors/escacs-base-2010"   data-target="#">Escacs Base 2010 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li  data-id="780" data-level="3">
+<a class="" href="/index.php/competicio/escacs-base/collaboradors"   data-target="#">Col·laboradors </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown-submenu mega" data-id="833" data-level="2">
+<a class="" href="/index.php/competicio/escacs-femeni"   data-target="#">Escacs i dona </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level2">
+<li  data-id="834" data-level="3">
+<a class="" href="/index.php/competicio/escacs-femeni/torneigs-femeni"   data-target="#">Torneigs Femení </a>
+
+</li>
+<li  data-id="835" data-level="3">
+<a class="" href="/index.php/competicio/escacs-femeni/circulars-femeni"   data-target="#">Circulars Femení </a>
+
+</li>
+<li  data-id="836" data-level="3">
+<a class="" href="/index.php/competicio/escacs-femeni/noticies-femeni"   data-target="#">Noticies escacs i dona </a>
+
+</li>
+<li  data-id="911" data-level="3">
+<a class="" href="/index.php/competicio/escacs-femeni/ediccions-anteriors"   data-target="#">Edicions anteriors </a>
+
+</li>
+<li  data-id="1025" data-level="3">
+<a class="" href="/index.php/competicio/escacs-femeni/historial-femeni-catalunya"   data-target="#">Historial Femení Catalunya </a>
+
+</li>
+<li  data-id="1276" data-level="3">
+<a class="" href="/index.php/competicio/escacs-femeni/pla-d-igualtat-de-la-federacio-catalana-d-escacs" target="_blank"   data-target="#">Pla d'Igualtat de la Federació Catalana d'Escacs </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li  data-id="1232" data-level="2">
+<a class="" href="/index.php/competicio/competicions-2"   data-target="#">eSports </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown mega" data-id="939" data-level="1">
+<span class=" dropdown-toggle separator"   data-target="#" data-toggle="dropdown"> Partides i ELO<b class="caret"></b></span>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level1">
+<li  data-id="474" data-level="2">
+<a class="" href="/index.php/partides-i-elo/retransmissions"   data-target="#">Retransmissions en directe </a>
+
+</li>
+<li class="dropdown-submenu mega" data-id="486" data-level="2">
+<a class="" href="/index.php/partides-i-elo/base-de-dades-de-partides"   data-target="#">Base de dades de partides </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level2">
+<li  data-id="1281" data-level="3">
+<a class="" href="https://escacs.cat/partides/lligacatalana2026.pgn"   data-target="#">Lliga Catalana 2026</a>
+
+</li>
+<li  data-id="1274" data-level="3">
+<a class="" href="https://escacs.cat/partides/lligacatalana2025.pgn"   data-target="#">Lliga Catalana 2025</a>
+
+</li>
+<li  data-id="1267" data-level="3">
+<a class="" href="https://escacs.cat/partides/lligacatalana2024.pgn"   data-target="#">Lliga Catalana 2024</a>
+
+</li>
+<li  data-id="1254" data-level="3">
+<a class="" href="https://escacs.cat/partides/lligacatalana2023.pgn"   data-target="#">Lliga Catalana 2023</a>
+
+</li>
+<li  data-id="1230" data-level="3">
+<a class="" href="https://escacs.cat/partides/lligacatalana2022.pgn"   data-target="#">Lliga Catalana 2022</a>
+
+</li>
+<li  data-id="1193" data-level="3">
+<a class="" href="http://www.escacs.cat/partides/lligacatalana2020.pgn"   data-target="#">Lliga Catalana 2020</a>
+
+</li>
+<li  data-id="1165" data-level="3">
+<a class="" href="http://www.escacs.cat/partides/lligacatalana2019.pgn"   data-target="#">Lliga Catalana 2019</a>
+
+</li>
+<li  data-id="1128" data-level="3">
+<a class="" href="http://www.escacs.cat/partides/LligaCatalana2018.pgn"   data-target="#">Lliga Catalana 2018</a>
+
+</li>
+<li  data-id="1122" data-level="3">
+<a class="" href="http://www.escacs.cat/partides/2017.pgn"   data-target="#">2017</a>
+
+</li>
+<li  data-id="1111" data-level="3">
+<a class="" href="http://www.escacs.cat/partides/2016.pgn"   data-target="#">2016</a>
+
+</li>
+<li  data-id="1055" data-level="3">
+<a class="" href="http://www.escacs.cat/partides/fins2015.pgn"   data-target="#">Anys 2011-2015</a>
+
+</li>
+<li  data-id="1019" data-level="3">
+<a class="" href="http://www.escacs.cat/partides/fins2010.pgn"   data-target="#">Anys 2006-2010</a>
+
+</li>
+<li  data-id="1018" data-level="3">
+<a class="" href="http://www.escacs.cat/partides/fins2005.pgn"   data-target="#">Anys 2001-2005</a>
+
+</li>
+<li  data-id="1017" data-level="3">
+<a class="" href="http://www.escacs.cat/partides/fins2000.pgn"   data-target="#">Partides fins 2000</a>
+
+</li>
+<li  data-id="1020" data-level="3">
+<a class="" href="http://www.escacs.cat/partides/recullhistoric.pgn"   data-target="#">Recull Històric</a>
+
+</li>
+<li  data-id="1022" data-level="3">
+<a class="" href="/./index.php/component/fce?op=21"   data-target="#">Visor de partides</a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li  data-id="483" data-level="2">
+<a class="" href="/index.php/partides-i-elo/avaluacio-elo"   data-target="#">Avaluació ELO </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown mega" data-id="940" data-level="1">
+<span class=" dropdown-toggle separator"   data-target="#" data-toggle="dropdown"> Clubs<b class="caret"></b></span>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level1">
+<li  data-id="838" data-level="2">
+<a class="" href="/./index.php/component/fce?op=1"   data-target="#">Gestió de Clubs</a>
+
+</li>
+<li  data-id="942" data-level="2">
+<a class="" href="http://www.escacs.cat/images/pdfs/manualgestio.pdf" onclick="window.open(this.href,'targetWindow','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes');return false;"   data-target="#">Manual de gestió</a>
+
+</li>
+<li  data-id="438" data-level="2">
+<a class="" href="/index.php/clubs/com-puc-federar-me"   data-target="#">Com puc federar-me? </a>
+
+</li>
+<li  data-id="475" data-level="2">
+<a class="" href="/./index.php/component/fce?op=1"   data-target="#">Trobar un club</a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown mega" data-id="941" data-level="1">
+<a class=" dropdown-toggle" href="/index.php/escoles"   data-target="#" data-toggle="dropdown">Escoles <b class="caret"></b></a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level1">
+<li  data-id="913" data-level="2">
+<a class="" href="/index.php/escoles/noticies"   data-target="#">Notícies </a>
+
+</li>
+<li  data-id="1142" data-level="2">
+<a class="" href="https://escacs.cat/index.php/rur-noticies" target="_blank"   data-target="#">Escola Rural</a>
+
+</li>
+<li  data-id="1218" data-level="2">
+<a class="" href="/index.php/escoles/materials-educatius"   data-target="#">Materials educatius </a>
+
+</li>
+<li  data-id="1278" data-level="2">
+<a class="" href="/index.php/escoles/congres-i-escola"   data-target="#">Congrés i Escola </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown mega" data-id="238" data-level="1">
+<span class=" dropdown-toggle separator"   data-target="#" data-toggle="dropdown"> Publicacions<b class="caret"></b></span>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level1">
+<li  data-id="473" data-level="2">
+<a class="" href="/index.php/publicacions/noticies"  title="Novetats"   data-target="#">Notícies FCE </a>
+
+</li>
+<li class="dropdown-submenu mega" data-id="445" data-level="2">
+<a class="" href="/index.php/publicacions/butlleti-escacs"   data-target="#">Butlletí d'Escacs </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level2">
+<li class="dropdown-submenu mega" data-id="1179" data-level="3">
+<a class="" href="/index.php/publicacions/butlleti-escacs/butlleti-digital"   data-target="#">Butlletí Digital </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level3">
+<li  data-id="1169" data-level="4">
+<a class="" href="/index.php/publicacions/butlleti-escacs/butlleti-digital/butlletins-2019"   data-target="#">Butlletins any 2019 </a>
+
+</li>
+<li  data-id="1151" data-level="4">
+<a class="" href="/index.php/publicacions/butlleti-escacs/butlleti-digital/butlletins-2018"   data-target="#">Butlletins any 2018 </a>
+
+</li>
+<li  data-id="1131" data-level="4">
+<a class="" href="/index.php/publicacions/butlleti-escacs/butlleti-digital/butlletins-any-2017"   data-target="#">Butlletins any 2017 </a>
+
+</li>
+<li  data-id="1057" data-level="4">
+<a class="" href="/index.php/publicacions/butlleti-escacs/butlleti-digital/butlletins-any-2016"   data-target="#">Butlletins any 2016 </a>
+
+</li>
+<li  data-id="1049" data-level="4">
+<a class="" href="/index.php/publicacions/butlleti-escacs/butlleti-digital/butlletins-any-2015"   data-target="#">Butlletins any 2015 </a>
+
+</li>
+<li  data-id="897" data-level="4">
+<a class="" href="/index.php/publicacions/butlleti-escacs/butlleti-digital/butlletins-any-2014"   data-target="#">Butlletins any 2014 </a>
+
+</li>
+<li  data-id="841" data-level="4">
+<a class="" href="/index.php/publicacions/butlleti-escacs/butlleti-digital/butlletins-2013"   data-target="#">Butlletins any 2013 </a>
+
+</li>
+<li  data-id="769" data-level="4">
+<a class="" href="/index.php/publicacions/butlleti-escacs/butlleti-digital/butlletins-any-2012"   data-target="#">Butlletins any 2012 </a>
+
+</li>
+<li  data-id="768" data-level="4">
+<a class="" href="/index.php/publicacions/butlleti-escacs/butlleti-digital/butlletins-any-2011"   data-target="#">Butlletins any 2011 </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li  data-id="1180" data-level="3">
+<a class="" href="/index.php/publicacions/butlleti-escacs/anteriors-pdf"   data-target="#">Anteriors PDF </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li  data-id="446" data-level="2">
+<a class="" href="/index.php/publicacions/reculls-de-premsa"   data-target="#">Reculls de premsa </a>
+
+</li>
+<li class="dropdown-submenu mega" data-id="494" data-level="2">
+<a class="" href="/index.php/publicacions/circulars"   data-target="#">Circulars </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level2">
+<li  data-id="1002" data-level="3">
+<a class="" href="/index.php/publicacions/circulars/circulars-2"   data-target="#">Circulars Generals </a>
+
+</li>
+<li  data-id="795" data-level="3">
+<a class="" href="/index.php/publicacions/circulars/circulars-barcelona"   data-target="#">Circulars Barcelona </a>
+
+</li>
+<li  data-id="796" data-level="3">
+<a class="" href="/index.php/publicacions/circulars/circulars-tarragona"   data-target="#">Circulars Tarragona </a>
+
+</li>
+<li  data-id="797" data-level="3">
+<a class="" href="/index.php/publicacions/circulars/circulars-girona"   data-target="#">Circulars Girona </a>
+
+</li>
+<li  data-id="798" data-level="3">
+<a class="" href="/index.php/publicacions/circulars/circulars-lleida"   data-target="#">Circulars Lleida </a>
+
+</li>
+<li  data-id="799" data-level="3">
+<a class="" href="/index.php/publicacions/circulars/circulars-comite-arbitres"   data-target="#">Circulars Comitè Àrbitres  </a>
+
+</li>
+<li  data-id="800" data-level="3">
+<a class="" href="/index.php/publicacions/circulars/circulars-escacs-base"   data-target="#">Circulars Escacs Base </a>
+
+</li>
+<li  data-id="801" data-level="3">
+<a class="" href="/index.php/publicacions/circulars/circulars-tecnics-retransmissions"   data-target="#">Circulars Tècnics Retransmissions </a>
+
+</li>
+<li  data-id="802" data-level="3">
+<a class="" href="/index.php/publicacions/circulars/circulars-comite-monitors"   data-target="#">Circulars Comitè Monitors </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown-submenu mega" data-id="762" data-level="2">
+<a class="" href="/index.php/publicacions/comunicats"   data-target="#">Comunicats </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level2">
+<li class="dropdown-submenu mega" data-id="764" data-level="3">
+<a class="" href="/index.php/publicacions/comunicats/assemblees-de-la-fce"   data-target="#">Assemblees de la FCE </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level3">
+<li  data-id="899" data-level="4">
+<a class="" href="/index.php/publicacions/comunicats/assemblees-de-la-fce/actes-assemblees-fce"   data-target="#">Actes Assemblees FCE </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li  data-id="766" data-level="3">
+<a class="" href="/index.php/publicacions/comunicats/responsabilitat-civil"   data-target="#">Responsabilitat civil </a>
+
+</li>
+<li  data-id="865" data-level="3">
+<a class="" href="http://www.escacs.cat/impressos/seguro.pdf"   data-target="#">Pòlissa assegurança</a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown-submenu mega" data-id="487" data-level="2">
+<a class="" href="/index.php/publicacions/videoteca"   data-target="#">Videoteca </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level2">
+<li  data-id="737" data-level="3">
+<a class="" href="/index.php/publicacions/videoteca/videos-campionats"   data-target="#">Vídeos campionats </a>
+
+</li>
+<li  data-id="738" data-level="3">
+<a class="" href="/index.php/publicacions/videoteca/videos-icc"   data-target="#">Vídeos ICC </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li  data-id="485" data-level="2">
+<a class="" href="/index.php/publicacions/reglaments"   data-target="#">Reglaments </a>
+
+</li>
+<li  data-id="760" data-level="2">
+<a class="" href="/index.php/publicacions/enllacos"   data-target="#">Enllaços </a>
+
+</li>
+<li  data-id="736" data-level="2">
+<a class="" href="/index.php/publicacions/impresos-fce"   data-target="#">Impresos FCE </a>
+
+</li>
+<li class="dropdown-submenu mega" data-id="727" data-level="2">
+<a class="" href="/index.php/publicacions/historial"   data-target="#">Historial </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level2">
+<li  data-id="730" data-level="3">
+<a class="" href="/index.php/publicacions/historial/equips"   data-target="#">Equips </a>
+
+</li>
+<li  data-id="1030" data-level="3">
+<a class="" href="/index.php/publicacions/historial/historia-absolut"   data-target="#">Absolut </a>
+
+</li>
+<li  data-id="731" data-level="3">
+<a class="" href="/index.php/publicacions/historial/copa-catalana"   data-target="#">Copa Catalana </a>
+
+</li>
+<li  data-id="732" data-level="3">
+<a class="" href="/index.php/publicacions/historial/juvenil"   data-target="#">Juvenil </a>
+
+</li>
+<li  data-id="733" data-level="3">
+<a class="" href="/index.php/publicacions/historial/rapides-per-equips"   data-target="#">Ràpides per equips </a>
+
+</li>
+<li  data-id="734" data-level="3">
+<a class="" href="/index.php/publicacions/historial/festa-catalana"   data-target="#">Festa Catalana </a>
+
+</li>
+<li  data-id="1026" data-level="3">
+<a class="" href="/index.php/publicacions/historial/femeni-catalunya"   data-target="#">Femení </a>
+
+</li>
+<li  data-id="1047" data-level="3">
+<a class="" href="/index.php/publicacions/historial/guardons-especials-festa"   data-target="#">Guardons especials </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li  data-id="1206" data-level="2">
+<a class="" href="/index.php/publicacions/preguntes-frequeents"   data-target="#">Preguntes freqüents </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown mega" data-id="448" data-level="1">
+<span class=" dropdown-toggle separator"   data-target="#" data-toggle="dropdown"> Comitès<b class="caret"></b></span>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level1">
+<li class="dropdown-submenu mega" data-id="488" data-level="2">
+<a class="" href="/index.php/comites/arbitres"   data-target="#">Àrbitres </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level2">
+<li  data-id="676" data-level="3">
+<a class="" href="/index.php/comites/arbitres/arbitres-amb-llicencia"   data-target="#">Àrbitres amb llicència </a>
+
+</li>
+<li  data-id="678" data-level="3">
+<a class="" href="/index.php/comites/arbitres/material-arbitral"   data-target="#">Material arbitral </a>
+
+</li>
+<li  data-id="679" data-level="3">
+<a class="" href="/index.php/comites/arbitres/normativa-i-reglaments"   data-target="#">Normativa i Reglaments de la FCE </a>
+
+</li>
+<li  data-id="683" data-level="3">
+<a class="" href="/index.php/comites/arbitres/normativa-comite-darbitres"   data-target="#">Normativa comitè d'àrbitres </a>
+
+</li>
+<li  data-id="682" data-level="3">
+<a class="" href="/index.php/comites/arbitres/circulars"   data-target="#">Circulars - licitacions - designacions </a>
+
+</li>
+<li  data-id="820" data-level="3">
+<a class="" href="/index.php/comites/arbitres/noticies-arbitres"   data-target="#">Noticies Comitè d'Àrbitres </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown-submenu mega" data-id="489" data-level="2">
+<a class="" href="/index.php/comites/monitors"   data-target="#">Monitors </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level2">
+<li  data-id="1124" data-level="3">
+<a class="" href="/index.php/comites/monitors/monitors-amb-llicencia"   data-target="#">Monitors amb llicència </a>
+
+</li>
+<li  data-id="775" data-level="3">
+<a class="" href="/index.php/comites/monitors/circulars"   data-target="#">Circulars </a>
+
+</li>
+<li  data-id="1050" data-level="3">
+<a class="" href="/index.php/comites/monitors/borsa-de-treball"   data-target="#">Borsa de treball </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown-submenu mega" data-id="492" data-level="2">
+<a class="" href="/index.php/comites/tecnics-retransmissions"   data-target="#">Tècnics retransmissions </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level2">
+<li  data-id="686" data-level="3">
+<a class="" href="/index.php/comites/tecnics-retransmissions/manuals"   data-target="#">Manuals </a>
+
+</li>
+<li  data-id="687" data-level="3">
+<a class="" href="/index.php/comites/tecnics-retransmissions/tecnics"   data-target="#">Tècnics </a>
+
+</li>
+<li  data-id="690" data-level="3">
+<a class="" href="/index.php/comites/tecnics-retransmissions/aplicacions-informatiques"   data-target="#">Aplicacions Informàtiques </a>
+
+</li>
+<li  data-id="689" data-level="3">
+<a class="" href="/index.php/comites/tecnics-retransmissions/normativa"   data-target="#">Normativa </a>
+
+</li>
+<li  data-id="776" data-level="3">
+<a class="" href="/index.php/comites/tecnics-retransmissions/circulars"   data-target="#">Circulars - licitacions - designacions </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown-submenu mega" data-id="763" data-level="2">
+<a class="" href="/index.php/comites/resolucions-comites"   data-target="#">Competició-Apel·lació </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level2">
+<li  data-id="1282" data-level="3">
+<a class="" href="/index.php/comites/resolucions-comites/resolucions-2026"   data-target="#">Resolucions 2026 </a>
+
+</li>
+<li  data-id="1273" data-level="3">
+<a class="" href="/index.php/comites/resolucions-comites/resolucions-2025"   data-target="#">Resolucions 2025 </a>
+
+</li>
+<li  data-id="1265" data-level="3">
+<a class="" href="/index.php/comites/resolucions-comites/resolucions-2024"   data-target="#">Resolucions 2024 </a>
+
+</li>
+<li  data-id="1252" data-level="3">
+<a class="" href="/index.php/comites/resolucions-comites/resolucions-2023"   data-target="#">Resolucions 2023 </a>
+
+</li>
+<li  data-id="1226" data-level="3">
+<a class="" href="/index.php/comites/resolucions-comites/resolucions-2022"   data-target="#">Resolucions 2022 </a>
+
+</li>
+<li  data-id="1217" data-level="3">
+<a class="" href="/index.php/comites/resolucions-comites/resolucions-2021"   data-target="#">Resolucions 2021 </a>
+
+</li>
+<li  data-id="1192" data-level="3">
+<a class="" href="/index.php/comites/resolucions-comites/resolucions-2020"   data-target="#">Resolucions 2020 </a>
+
+</li>
+<li  data-id="1166" data-level="3">
+<a class="" href="/index.php/comites/resolucions-comites/resolucions-2019"   data-target="#">Resolucions 2019 </a>
+
+</li>
+<li  data-id="1135" data-level="3">
+<a class="" href="/index.php/comites/resolucions-comites/resolucions-2018"   data-target="#">Resolucions 2018 </a>
+
+</li>
+<li  data-id="1120" data-level="3">
+<a class="" href="/index.php/comites/resolucions-comites/resolucions-2017"   data-target="#">Resolucions 2017 </a>
+
+</li>
+<li  data-id="1058" data-level="3">
+<a class="" href="/index.php/comites/resolucions-comites/resolucions-2016"   data-target="#">Resolucions 2016 </a>
+
+</li>
+<li  data-id="1010" data-level="3">
+<a class="" href="/index.php/comites/resolucions-comites/2015"   data-target="#">Resolucions 2015 </a>
+
+</li>
+<li  data-id="893" data-level="3">
+<a class="" href="/index.php/comites/resolucions-comites/resolucions-2014"   data-target="#">Resolucions 2014 </a>
+
+</li>
+<li  data-id="895" data-level="3">
+<a class="" href="/index.php/comites/resolucions-comites/sancions-administratives"   data-target="#">Sancions Administratives </a>
+
+</li>
+<li  data-id="767" data-level="3">
+<a class="" href="/index.php/comites/resolucions-comites/membres-dels-comites"   data-target="#">Membres dels Comitès </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown mega" data-id="472" data-level="1">
+<span class=" dropdown-toggle separator"   data-target="#" data-toggle="dropdown"> Federació<b class="caret"></b></span>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level1">
+<li  data-id="290" data-level="2">
+<a class="" href="/index.php/federacio/els-escacs-a-catalunya"   data-target="#">Els escacs a Catalunya </a>
+
+</li>
+<li  data-id="493" data-level="2">
+<a class="" href="/index.php/federacio/organigrama"   data-target="#">Organigrama </a>
+
+</li>
+<li class="dropdown-submenu mega" data-id="1171" data-level="2">
+<span class=" separator"   data-target="#"> Indicadors clau</span>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level2">
+<li  data-id="1172" data-level="3">
+<a class="" href="https://escacs.cat/images/indicadors_2019_p%C3%A0g_1_a_11_compressed.pdf"   data-target="#">Federats i Clubs</a>
+
+</li>
+<li  data-id="1173" data-level="3">
+<a class="" href="https://escacs.cat/images/indicadors_2019_p%C3%A0g_12_a_23.pdf"   data-target="#">Participació</a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li  data-id="1011" data-level="2">
+<a class="" href="/index.php/federacio/organigrama-2"   data-target="#">Transparència </a>
+
+</li>
+<li class="dropdown-submenu mega" data-id="496" data-level="2">
+<a class="" href="/index.php/federacio/territorial-bcn"   data-target="#">Territorial Barcelona </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level2">
+<li  data-id="1248" data-level="3">
+<a class="" href="/index.php/federacio/territorial-bcn/calendari-territorial-bcn"   data-target="#">Calendari Territorial BCN </a>
+
+</li>
+<li  data-id="697" data-level="3">
+<a class="" href="/index.php/federacio/territorial-bcn/circulars"   data-target="#">Circulars </a>
+
+</li>
+<li  data-id="1238" data-level="3">
+<a class="" href="/index.php/federacio/territorial-bcn/mini-circuit-barcelona"   data-target="#">Mini-Circuit Barcelona </a>
+
+</li>
+<li  data-id="771" data-level="3">
+<a class="" href="/index.php/federacio/territorial-bcn/noticies"   data-target="#">Competicions i Notícies </a>
+
+</li>
+<li  data-id="1178" data-level="3">
+<a class="" href="/index.php/federacio/territorial-bcn/els-clubs-organitzen-3" target="_blank"   data-target="#">Els clubs de Barcelona organitzen </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown-submenu mega" data-id="673" data-level="2">
+<a class="" href="/index.php/federacio/territorial-gir"   data-target="#">Territorial Girona </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level2">
+<li  data-id="1249" data-level="3">
+<a class="" href="/index.php/federacio/territorial-gir/calendari-territorial-grn"   data-target="#">Calendari Territorial GRN </a>
+
+</li>
+<li  data-id="712" data-level="3">
+<a class="" href="/index.php/federacio/territorial-gir/circulars"   data-target="#">Circulars </a>
+
+</li>
+<li  data-id="716" data-level="3">
+<a class="" href="/index.php/federacio/territorial-gir/noticies"   data-target="#">Competicions i Notícies </a>
+
+</li>
+<li  data-id="1146" data-level="3">
+<a class="" href="/index.php/federacio/territorial-gir/els-clubs-organitzen-2" target="_blank"   data-target="#">Els clubs de Girona organitzen </a>
+
+</li>
+<li  data-id="1258" data-level="3">
+<a class="" href="/index.php/federacio/territorial-gir/circuit-escacs-actius"   data-target="#">Circuit Escacs Actius </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown-submenu mega" data-id="674" data-level="2">
+<a class="" href="/index.php/federacio/territorial-lleida"   data-target="#">Territorial Lleida </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level2">
+<li  data-id="1250" data-level="3">
+<a class="" href="/index.php/federacio/territorial-lleida/calendari-territorial-lle"   data-target="#">Calendari Territorial LLE </a>
+
+</li>
+<li  data-id="707" data-level="3">
+<a class="" href="/index.php/federacio/territorial-lleida/circulars"   data-target="#">Circulars </a>
+
+</li>
+<li  data-id="709" data-level="3">
+<a class="" href="/index.php/federacio/territorial-lleida/noticies"   data-target="#">Competicions i Notícies </a>
+
+</li>
+<li  data-id="1005" data-level="3">
+<a class="" href="/index.php/federacio/territorial-lleida/noticies-2" target="_blank"   data-target="#">Els Clubs organitzen </a>
+
+</li>
+<li  data-id="1104" data-level="3">
+<a class="" href="/index.php/federacio/territorial-lleida/circuit-lleida"   data-target="#">Circuit d'Escacs Ràpid/Llampec </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li class="dropdown-submenu mega" data-id="675" data-level="2">
+<a class="" href="/index.php/federacio/territorial-tar"   data-target="#">Territorial Tarragona </a>
+
+<div class="nav-child dropdown-menu mega-dropdown-menu"  ><div class="mega-dropdown-inner">
+<div class="row">
+<div class="col-xs-12 mega-col-nav" data-width="12"><div class="mega-inner">
+<ul class="mega-nav level2">
+<li  data-id="1251" data-level="3">
+<a class="" href="/index.php/federacio/territorial-tar/calendari-territorial-tgn"   data-target="#">Calendari Territorial TGN </a>
+
+</li>
+<li  data-id="700" data-level="3">
+<a class="" href="/index.php/federacio/territorial-tar/circulars"   data-target="#">Circulars </a>
+
+</li>
+<li  data-id="702" data-level="3">
+<a class="" href="/index.php/federacio/territorial-tar/noticies"   data-target="#">Competicions i Notícies </a>
+
+</li>
+<li  data-id="916" data-level="3">
+<a class="" href="/index.php/federacio/territorial-tar/els-clubs-organitzen" target="_blank"   data-target="#">Els clubs organitzen </a>
+
+</li>
+<li  data-id="1152" data-level="3">
+<a class="" href="/index.php/federacio/territorial-tar/circuit-d-escacs-rapids"   data-target="#">Circuit d'escacs ràpids </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+<li  data-id="831" data-level="2">
+<a class="" href="/index.php/federacio/assemblea-24nov"   data-target="#">Assemblees FCE </a>
+
+</li>
+<li  data-id="497" data-level="2">
+<a class="" href="/index.php/federacio/contactar"   data-target="#">Contactar </a>
+
+</li>
+</ul>
+</div></div>
+</div>
+</div></div>
+</li>
+</ul>
+</div>
+
+					</div>
+
+				</nav>
+				<!-- //MAIN NAVIGATION -->
+			</div>
+			
+		</div>
+	</div>
+</header>
+<!-- //HEADER -->
+	
+	<div class="in-wrapper">
+    
+		
+<!-- SLIDER -->
+<!-- //SLIDER -->		
+		
+
+		
+			
+		
+
+		
+
+		
+<!-- RECENT WORKS -->
+<!-- //RECENT WORKS -->
+		
+<div id="t3-mainbody" class="container t3-mainbody">
+	<div class="row">
+
+		<!-- MAIN CONTENT -->
+		<div id="t3-content" class="t3-content col-xs-12 col-sm-8">
+			<!-- Content Top -->
+						<!-- //Content Top -->
+						<div id="system-message-container">
+	</div>
+
+						<div style="float:left;clear:both;margin 0 auto;width:80%;margin-bottom:30px">
+<div class="row">
+<div style="z-index:99;position:relative;float:left;clear:none;width:50px;text-align:center;align:center;margin-left:18px">Clubs<br><img id="admClb" style="float:left;clear:none;width:50px;cursor:pointer" alt="Clubs" title="Clubs" onclick="document.location.href='fce?op=1'" onmouseover="this.src='/images/botons_grans/clubs_1.png'" onmouseout="this.src='/images/botons_grans/clubs_2.png'" src="/images/botons_grans/clubs_2.png"></div>
+<div style="z-index:99;position:relative;float:left;clear:none;width:50px;text-align:center;align:center;margin-left:18px">Esportistes<br><img id="admJug" style="float:left;clear:none;width:50px;cursor:pointer" alt="Jugadors" title="Jugadors" onclick="document.location.href='fce?op=2'" onmouseover="this.src='/images/botons_grans/jugadors_1.png'" onmouseout="this.src='/images/botons_grans/jugadors_2.png'" src="/images/botons_grans/jugadors_2.png"></div>
+<div style="z-index:99;position:relative;float:left;clear:none;width:50px;text-align:center;align:center;margin-left:18px">Torneigs<br><img id="admTrn" style="float:left;clear:none;width:50px;cursor:pointer" alt="Tornejos" title="Tornejos" onclick="document.location.href='fce?op=5'" onmouseover="this.src='/images/botons_grans/tornejos_1.png'" onmouseout="this.src='/images/botons_grans/tornejos_2.png'" src="/images/botons_grans/tornejos_2.png"></div>
+<div style="z-index:99;position:relative;float:left;clear:none;width:50px;text-align:center;margin-left:18px">Lliga<br><img id="admLliga" style="float:left;clear:none;width:50px;cursor:pointer" alt="Administració" title="Administració lliga catalana" onclick="document.location.href='fce?op=20'" onmouseover="this.src='/images/botons_grans/lligacatalana_1.png'" onmouseout="this.src='/images/botons_grans/lligacatalana_2.png'" src="/images/botons_grans/lligacatalana_2.png"></div>
+</div>
+</div>
+
+  <div class='home' style='clear:both;'><div class='navHome col-md-3'><ul class='nav nav-pills nav-stacked'><li class=""><a href="https://escacs.cat/index.php/component/fce?op=20&tasca=Equips">Clubs - Adreces</a></li><li class=""><a href="https://escacs.cat/index.php/component/fce?op=20&tasca=Jugadors">Esportistes</a></li><li class="active"><a href="https://escacs.cat/index.php/component/fce?op=20&tasca=calendari">Calendari i resultats</a></li><li class=""><a href="https://escacs.cat/index.php/component/fce?op=20&tasca=resultats">Actes publicades</a></li><li class=""><a href="https://escacs.cat/index.php/component/fce?op=20&tasca=quadreClassificacio">Classificacions</a></li><li class=""><a href="https://escacs.cat/index.php/component/fce?op=20&tasca=partides">Partides</a></li><li class=""><a href="https://escacs.cat/index.php/component/fce?op=20&tasca=documents">Documentació</a></li></ul></div>  <div class='contingut col-md-9'>
+    <h3 class='module-title' style='padding-top: 0px;'>Lliga Catalana</h3>
+    <div id='fitxa_cerca' style="display: hidden"></div>
+    <div id='jqxgrid' style='width:150%;float:left;clear:none;'></div>
+	
+   	
+  </div>
+
+
+
+</div>
+
+<script type="text/javascript">
+  var GMvers="gmvw20";
+  var urlB="https://escacs.cat/components/com_fce/";
+  var urlXML = "https://escacs.cat/components/com_fce/gmvw20/conn/";
+  var xmlCform="c_lliga_calendari";
+  var URLWeb = "https://escacs.cat/index.php/component/fce";
+  var autoTramet = 1;
+
+  document.title = "Federació Catalana d'Escacs";
+
+  var $_GET = {},
+      args = location.search.substr(1).split(/&/).concat(location.hash.substr(1).split(/&/));
+
+  for (var i=0; i < args.length; ++i) {
+    var tmp = args[i].split(/=/);
+    if(typeof $_GET[decodeURIComponent(tmp[0])] === 'undefined') {
+      if (tmp[0] != "") {
+        $_GET[decodeURIComponent(tmp[0])] = decodeURIComponent(tmp.slice(1).join("").replace("+", " "));
+      }
+    }
+  }
+
+  $_GET.serialize = function () {
+    var retstr = [];
+    for(var param in this) {
+      if(param != 'serialize' && param != 'updateHash') {
+        retstr.push('' + encodeURIComponent(param) + '=' + encodeURIComponent(this[param]) + '');
+      }
+    }
+    return retstr.join('&');
+  }
+    
+  $_GET.updateHash = function () {
+    var queryKeys = location.search.substr(1).split(/&/).map(function (a) {
+                      return a.split(/=/)[0];
+                    }),
+        retStr = [];
+    
+    for(var param in this) {
+      if(param != 'serialize' && param != 'updateHash' && queryKeys.indexOf(param) == -1) {
+        retStr.push('' + encodeURIComponent(param) + '=' + encodeURIComponent(this[param]) + '');
+      }
+    }
+    
+    location.hash = retStr.join('&');
+  }
+  
+  
+</script>
+<div id='fitxa_dades'></div>
+<script type="text/javascript" src="/components/com_fce/gmvw20/js/lligaCatalana.js"></script>
+
+			<!-- Content Bottom -->
+						<!-- //Content Bottom -->
+		</div>
+		<!-- //MAIN CONTENT -->
+
+		<!-- SIDEBAR RIGHT -->
+		<div class="t3-sidebar t3-sidebar-right col-xs-12 col-sm-4 ">
+			<div class="t3-module module " id="Mod261"><div class="module-inner"><div class="module-ct"><style type="text/css">
+/* Custom CSS */
+.newsflash > p > img {
+    max-width: 100%;
+    height: 165px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+</style></div></div></div>
+		</div>
+		<!-- //SIDEBAR RIGHT -->
+
+	</div>
+</div> 
+
+		
+		
+
+		
+		
+		
+	<!-- BOTTOM -->
+		<!-- //BOTTOM -->		
+		
+<!-- FOOTER -->
+<footer id="t3-footer" class="wrap t3-footer">
+
+			<!-- FOOT NAVIGATION -->
+		<div class="container">
+				<!-- SPOTLIGHT -->
+	<div class="t3-spotlight t3-footnav  row">
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-6">
+								<div class="t3-module module " id="Mod205"><div class="module-inner"><div class="module-ct">
+<div class="custom " >
+	<p><img style="display: block; margin-left: auto; margin-right: auto;" alt="" src="/images/Centenari/logotip_federaci_2024.jpg" height="103" width="208" /></p></div>
+ 
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-6">
+								<div class="t3-module module " id="Mod207"><div class="module-inner"><div class="module-ct">
+<div class="custom " >
+	<p><img style="display: block; margin-left: auto; margin-right: auto;" alt="" src="/images/ico_peu2.png" /></p></div>
+ 
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-6">
+								<div class="t3-module module " id="Mod208"><div class="module-inner"><div class="module-ct">
+<div class="custom " >
+	<p><img style="display: block; margin-left: auto; margin-right: auto;" alt="" src="/images/ico_peu3.png" /></p></div>
+ 
+</div></div></div>
+							</div>
+					<div class=" col-lg-3 col-md-3 col-sm-3 col-xs-6">
+								&nbsp;
+							</div>
+			</div>
+<!-- SPOTLIGHT -->	 	</div>
+		<!-- //FOOT NAVIGATION -->
+	
+		<section class="t3-copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 copyright ">
+					
+<div class="custom " >
+	<p><strong>Federació Catalana d'Escacs</strong></p>
+<p>Adreça: Sant Adrià, 20, 08030, Barcelona</p>
+<p>Horari d'atenció al públic els mesos de juliol i agost: Matí: de dilluns a divendres, de 9:30 h a 14:00 hores.</p>
+<p>Horari d'atenció al públic: Matí: de dilluns a divendres, de 9:30 h a 13:30 hores i dilluns i dijous tarda de 15:00 a 17:00 hores.</p>
+<p>Telèfon: 93 318 59 26 - 93 318 57 89 &nbsp;| &nbsp;Fax: 93 412 50 97 &nbsp;| &nbsp;E-mail: <a href="mailto: federacio@escacs.cat"> federacio@escacs.cat</a></p>
+<p><a href="/index.php/avis-legal" target="_blank">Avís legal</a></p>
+<p>&nbsp;</p></div>
+ 
+
+				</div>
+							</div>
+		</div>
+	</section>
+	
+</footer>
+<!-- //FOOTER -->		
+	</div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultor Lliga Catalana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0ea5e9',
+                            600: '#0284c7',
+                            900: '#0c4a6e',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-slate-50 text-slate-900 min-h-screen font-sans">
+
+    <!-- Header -->
+    <header class="bg-white border-b border-slate-200 shadow-sm sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <div class="bg-brand-600 text-white p-2 rounded-lg">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                </div>
+                <h1 class="text-xl font-bold text-slate-800 tracking-tight">Consultor Lliga Catalana</h1>
+            </div>
+            <div class="text-sm text-slate-500 font-medium">FCE Data Visualizer</div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+
+        <!-- Controls Section -->
+        <div class="bg-white rounded-xl shadow-sm border border-slate-200 p-6 mb-8 transition-all hover:shadow-md">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
+                <!-- Season Selector -->
+                <div>
+                    <label for="season" class="block text-sm font-semibold text-slate-700 mb-2">Temporada</label>
+                    <select id="season"
+                        class="w-full rounded-lg border-slate-300 shadow-sm focus:border-brand-500 focus:ring-brand-500 py-2.5 px-3 bg-slate-50 hover:bg-white transition-colors cursor-pointer">
+                        <option value="2026">2026</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                    </select>
+                </div>
+
+                <!-- Category Selector -->
+                <div>
+                    <label for="categoryId" class="block text-sm font-semibold text-slate-700 mb-2">Categoria</label>
+                    <div class="relative">
+                        <select id="categoryId"
+                            class="w-full rounded-lg border-slate-300 shadow-sm focus:border-brand-500 focus:ring-brand-500 py-2.5 px-3 bg-slate-50 hover:bg-white transition-colors cursor-pointer appearance-none">
+                            <option value="">Totes les categories</option>
+                            <!-- Options will be populated by JS -->
+                        </select>
+                        <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                            <svg class="h-4 w-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Club Selector -->
+                <div>
+                    <label for="clubId" class="block text-sm font-semibold text-slate-700 mb-2">Club</label>
+                    <div class="relative">
+                        <select id="clubId"
+                            class="w-full rounded-lg border-slate-300 shadow-sm focus:border-brand-500 focus:ring-brand-500 py-2.5 px-3 bg-slate-50 hover:bg-white transition-colors cursor-pointer appearance-none">
+                            <option value="">Selecciona un club...</option>
+                            <!-- Options will be populated by JS -->
+                        </select>
+                        <div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+                            <svg class="h-4 w-4 text-slate-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Actions -->
+                <div class="flex gap-3">
+                    <button id="searchBtn"
+                        class="flex-1 bg-brand-600 hover:bg-brand-700 text-white font-semibold py-2.5 px-4 rounded-lg shadow-sm transition-all transform hover:scale-[1.02] active:scale-[0.98] flex items-center justify-center gap-2">
+                        <span>Buscar Datos</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Error/Status Message -->
+            <div id="statusMsg" class="mt-4 hidden p-3 rounded-lg text-sm font-medium"></div>
+        </div>
+
+        <!-- Results Section -->
+        <div id="resultsContainer" class="hidden">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold text-slate-800">Resultados por Jugador</h2>
+                <div class="text-sm text-slate-500">
+                    Mostrando <span id="playerCount" class="font-bold text-slate-900">0</span> jugadores activos
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-slate-200">
+                        <thead class="bg-slate-50">
+                            <tr>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">
+                                    Ronda</th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">
+                                    Tablero</th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">
+                                    Jugador</th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">
+                                    Orden</th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">
+                                    Título</th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">
+                                    ELO</th>
+                                <th scope="col"
+                                    class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">
+                                    Resultado</th>
+                            </tr>
+                        </thead>
+                        <tbody id="resultsBody" class="bg-white divide-y divide-slate-200">
+                            <!-- Rows will be injected here -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Empty State -->
+                <div id="emptyState" class="hidden py-12 flex flex-col items-center justify-center text-center">
+                    <div class="bg-slate-100 p-4 rounded-full mb-3">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-slate-400" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-medium text-slate-900">No se encontraron resultados</h3>
+                    <p class="text-slate-500 mt-1">Intenta con otros filtros o asegura que el club haya jugado.</p>
+                </div>
+
+                <!-- Export Actions -->
+                <div class="p-6 bg-slate-50 border-t border-slate-200 flex justify-end gap-3">
+                    <button id="exportTxtBtn"
+                        class="bg-slate-600 hover:bg-slate-700 text-white font-bold py-2 px-4 rounded inline-flex items-center transition-colors shadow-sm">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                            </path>
+                        </svg>
+                        Exportar a TXT
+                    </button>
+                    <button id="exportBtn"
+                        class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded inline-flex items-center transition-colors shadow-sm">
+                        <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                            </path>
+                        </svg>
+                        Exportar a Excel
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading State -->
+        <div id="loadingState" class="hidden py-20 flex flex-col items-center justify-center">
+            <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-brand-600 mb-4"></div>
+            <p class="text-slate-600 font-medium animate-pulse">Consultando actas...</p>
+        </div>
+
+    </main>
+
+    <script src="mockData.js"></script>
+    <script src="clubs.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
