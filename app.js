@@ -84,8 +84,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         try {
             const targetUrl = `${API_URL}?task=calendari&idTemp=${season}&idGrup=${groupId}`;
-            const response = await fetchWithFallback(targetUrl);
-            const data = await response.json();
+            const data = await fetchData(targetUrl);
 
             if (!Array.isArray(data)) throw new Error("Invalid calendar data");
 
@@ -291,7 +290,7 @@ table, td, th { border: 1px solid black; text-align: center; mso-number-format:"
         }
     }
 
-    async function fetchWithFallback(targetUrl) {
+    async function fetchData(targetUrl) {
         let lastError;
         let triedProxies = [];
 
@@ -309,20 +308,31 @@ table, td, th { border: 1px solid black; text-align: center; mso-number-format:"
 
                 clearTimeout(timeoutId);
 
-                if (response.ok) {
-                    return response;
+                if (!response.ok) {
+                    throw new Error(`Status ${response.status}`);
                 }
-                throw new Error(`Status ${response.status}`);
+
+                // Try to parse JSON. If it fails (e.g. proxy returns HTML error page), 
+                // the catch block will trigger and try next proxy.
+                const data = await response.json();
+
+                // Some proxies might return 200 OK but with an object containing an error message
+                if (data && data.error) {
+                    throw new Error(data.error);
+                }
+
+                return data;
             } catch (error) {
                 const isTimeout = error.name === 'AbortError';
-                console.warn(`Failed to fetch via ${proxy}:`, isTimeout ? 'Timeout' : error);
-                lastError = isTimeout ? new Error('Tiempo de espera superado') : error;
+                const isJsonError = error instanceof SyntaxError;
+                console.warn(`Failed to fetch via ${proxy}:`, isTimeout ? 'Timeout' : (isJsonError ? 'Invalid JSON' : error.message));
+                lastError = error;
             }
         }
 
-        const errorMsg = `No se pudo conectar con el servidor de Escacs.cat después de intentar con ${triedProxies.length} servidores auxiliares. 
-        Esto puede deberse a un bloqueo temporal o saturación. Por favor, intenta de nuevo.
-        Error final: ${lastError?.message || 'Error de red'}`;
+        const errorMsg = `No se pudo obtener datos de Escacs.cat después de intentar con ${triedProxies.length} servidores auxiliares. 
+        Esto puede deberse a un bloqueo temporal o problemas con los proxies. 
+        Error final: ${lastError?.message || 'Error de parsing o red'}`;
 
         throw new Error(errorMsg);
     }
@@ -335,8 +345,7 @@ table, td, th { border: 1px solid black; text-align: center; mso-number-format:"
             // Fetch categories: task=grupsActes&idTemp=2025&resultats=true
             const targetUrl = `${API_URL}?task=grupsActes&idTemp=${season}&resultats=true`;
 
-            const response = await fetchWithFallback(targetUrl);
-            const data = await response.json();
+            const data = await fetchData(targetUrl);
 
             categorySelect.innerHTML = '<option value="">Totes les categories</option>';
 
@@ -404,8 +413,7 @@ table, td, th { border: 1px solid black; text-align: center; mso-number-format:"
             let calendarUrl = `${API_URL}?task=calendari&idTemp=${season}&idClub=${clubId}`;
             if (categoryId) calendarUrl += `&idGrup=${categoryId}`;
 
-            const calendarResponse = await fetchWithFallback(calendarUrl);
-            const calendarData = await calendarResponse.json();
+            const calendarData = await fetchData(calendarUrl);
 
             if (!Array.isArray(calendarData) || calendarData.length === 0) {
                 showEmptyState(true);
@@ -466,8 +474,7 @@ table, td, th { border: 1px solid black; text-align: center; mso-number-format:"
             const actaPromises = actaIds.map(async (acta) => {
                 try {
                     const actaUrl = `${API_URL}?task=obtePartidesCalendari&resultats=true&idCalendari=${acta.id}`;
-                    const actaResponse = await fetchWithFallback(actaUrl);
-                    const actaData = await actaResponse.json();
+                    const actaData = await fetchData(actaUrl);
 
                     if (actaData && Array.isArray(actaData.partides)) {
                         return parseActa(actaData, clubId, acta.roundName);
