@@ -239,56 +239,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.removeChild(downloadLink);
     }
 
-    function exportTableToExcel(tableId, filename = '') {
-        try {
-            const table = document.querySelector('#resultsContainer table');
-            if (!table) {
-                console.error("Tabla no encontrada para exportar");
-                showStatus("Error: No hay datos para exportar", "error");
-                return;
-            }
-
-            const categoryTitle = document.getElementById('resultsTitle')?.textContent || "Resultados";
-
-            // Minimalist HTML for Excel with BOM for UTF-8
-            const uri = 'data:application/vnd.ms-excel;base64,';
-            const template = `
-<html xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns="http://www.w3.org/TR/REC-html40">
-<head>
-<!--[if gte mso 9]><xml><x:ExcelWorkbook><x:ExcelWorksheets><x:ExcelWorksheet><x:Name>Resultados</x:Name><x:WorksheetOptions><x:DisplayGridlines/></x:WorksheetOptions></x:ExcelWorksheet></x:ExcelWorksheets></x:ExcelWorkbook></xml><![endif]-->
-<meta charset="utf-8">
-<style>
-.text-green-600 { color: #059669; }
-.text-red-500 { color: #ef4444; }
-.text-amber-600 { color: #d97706; }
-table, td, th { border: 1px solid black; text-align: center; mso-number-format:"\#\,\#\#0\.0"; }
-</style>
-</head>
-<body>
-<h3>${categoryTitle}</h3>
-<table>${table.innerHTML}</table>
-</body>
-</html>`;
-
-            const blob = new Blob(['\ufeff', template], {
-                type: 'application/vnd.ms-excel;charset=utf-8'
-            });
-
-            const url = URL.createObjectURL(blob);
-            const downloadLink = document.createElement("a");
-
-            downloadLink.href = url;
-            downloadLink.download = filename ? `${filename}.xls` : 'resultados.xls';
-
-            document.body.appendChild(downloadLink);
-            downloadLink.click();
-            document.body.removeChild(downloadLink);
-
-        } catch (e) {
-            console.error("Error exportando:", e);
-            showStatus("Error al exportar el archivo", "error");
-        }
-    }
+    // exportTableToExcel moved to the end of the file to avoid duplication
 
     async function fetchData(targetUrl) {
         let lastError;
@@ -613,7 +564,7 @@ table, td, th { border: 1px solid black; text-align: center; mso-number-format:"
         // 2. Build Header dynamically
         // Columns: Jugador | Orden | Título | ELO | R1 | R2 | ...
         resultsHeader.innerHTML = `
-            <th class="px-6 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider">Jugador</th>
+            <th class="px-6 py-3 text-left text-xs font-bold text-slate-500 uppercase tracking-wider">Jugador</th>
             <th class="px-4 py-3 text-center text-xs font-medium text-slate-500 uppercase tracking-wider">Orden</th>
             <th class="px-4 py-3 text-center text-xs font-medium text-slate-500 uppercase tracking-wider">Título</th>
             <th class="px-4 py-3 text-center text-xs font-medium text-slate-500 uppercase tracking-wider">ELO</th>
@@ -634,6 +585,12 @@ table, td, th { border: 1px solid black; text-align: center; mso-number-format:"
             resultsHeader.appendChild(th);
         }
 
+        // Add TOTAL column at the end of header
+        const totalTh = document.createElement('th');
+        totalTh.className = "px-4 py-3 text-center text-xs font-bold text-brand-900 uppercase tracking-wider bg-brand-100 border-x-2 border-brand-200";
+        totalTh.textContent = "TOTAL";
+        resultsHeader.appendChild(totalTh);
+
         // 3. Render Rows
         const roundTotals = new Array(maxRound + 1).fill(0); // Index 0 unused
 
@@ -641,29 +598,36 @@ table, td, th { border: 1px solid black; text-align: center; mso-number-format:"
             const row = document.createElement('tr');
             row.className = 'hover-row fade-in border-b border-slate-100';
 
-            // Fixed Info
-            let html = `
-                <td class="px-6 py-3 whitespace-nowrap text-sm font-medium text-brand-600">${p.nombre}</td>
-                <td class="px-4 py-3 whitespace-nowrap text-sm text-center text-slate-500">${p.orden}</td>
-                <td class="px-4 py-3 whitespace-nowrap text-sm text-center text-slate-500"><span class="bg-slate-100 px-2 py-0.5 rounded text-xs font-bold">${p.titulo}</span></td>
-                <td class="px-4 py-3 whitespace-nowrap text-sm text-center text-slate-500">${Number(p.elo).toLocaleString('es-ES')}</td>
-            `;
-
-            // Dynamic Rounds
+            // Calculate player total and build rounds HTML
+            let playerTotal = 0;
+            let roundsHtml = '';
             for (let i = 1; i <= maxRound; i++) {
                 const res = p.results[i] || '-';
                 const colorClass = getResultColor(res);
 
-                // Add to totals
+                // Add to player total
+                if (res === '1') playerTotal += 1;
+                else if (res === '½') playerTotal += 0.5;
+
+                // Add to round totals (column totals)
                 let val = 0;
                 if (res === '1') val = 1;
-                if (res === '½') val = 0.5;
+                else if (res === '½') val = 0.5;
                 roundTotals[i] += val;
 
-                html += `<td class="px-2 py-3 whitespace-nowrap text-sm font-bold text-center ${colorClass}">${res}</td>`;
+                roundsHtml += `<td class="px-2 py-3 whitespace-nowrap text-sm font-bold text-center ${colorClass}">${res}</td>`;
             }
 
-            row.innerHTML = html;
+            // Fixed Info + Rounds + Total at end
+            row.innerHTML = `
+                <td class="px-6 py-3 whitespace-nowrap text-sm font-medium text-brand-600">${p.nombre}</td>
+                <td class="px-4 py-3 whitespace-nowrap text-sm text-center text-slate-500">${p.orden}</td>
+                <td class="px-4 py-3 whitespace-nowrap text-sm text-center text-slate-500"><span class="bg-slate-100 px-2 py-0.5 rounded text-xs font-bold">${p.titulo}</span></td>
+                <td class="px-4 py-3 whitespace-nowrap text-sm text-center text-slate-500">${Number(p.elo).toLocaleString('es-ES')}</td>
+                ${roundsHtml}
+                <td class="px-4 py-3 whitespace-nowrap text-sm text-center font-bold text-brand-900 bg-brand-100/30 border-x-2 border-brand-200">${playerTotal.toLocaleString('es-ES')}</td>
+            `;
+
             resultsBody.appendChild(row);
         });
 
@@ -671,6 +635,7 @@ table, td, th { border: 1px solid black; text-align: center; mso-number-format:"
         const totalRow = document.createElement('tr');
         totalRow.className = 'bg-brand-50 font-bold border-t-2 border-brand-100';
 
+        const grandTotal = roundTotals.reduce((a, b) => a + b, 0);
         let totalHtml = `
             <td class="px-6 py-4 whitespace-nowrap text-sm text-brand-800">TOTAL RONDA</td>
             <td colspan="3"></td>
@@ -680,6 +645,9 @@ table, td, th { border: 1px solid black; text-align: center; mso-number-format:"
             const valStr = roundTotals[i].toLocaleString('es-ES');
             totalHtml += `<td class="px-2 py-4 whitespace-nowrap text-sm text-center text-brand-700">${valStr}</td>`;
         }
+
+        // Add Grand Total at the end of the totals row
+        totalHtml += `<td class="px-4 py-4 whitespace-nowrap text-sm text-center text-brand-900 bg-brand-100/50 border-x-2 border-brand-200">${grandTotal.toLocaleString('es-ES')}</td>`;
 
         totalRow.innerHTML = totalHtml;
         resultsBody.appendChild(totalRow);
