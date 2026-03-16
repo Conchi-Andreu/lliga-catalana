@@ -436,25 +436,36 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // 3. Fetch details for each Acta SEQUENTIALLY with proxy rotation and rate limit delay
+            // 3. Fetch details for each Acta in CHUNKS to speed up (3 at a time)
             const resultsArrays = [];
-            for (let i = 0; i < actaIds.length; i++) {
-                const acta = actaIds[i];
-                try {
-                    showStatus(`Procesando acta ${i + 1} de ${actaIds.length}... (${acta.roundName})`, 'info');
-                    const actaUrl = `${API_URL}?task=obtePartidesCalendari&resultats=true&idCalendari=${acta.id}`;
-                    const actaData = await fetchData(actaUrl);
+            const chunkSize = CORS_PROXIES.length; // Match number of proxies (3)
 
-                    if (actaData && Array.isArray(actaData.partides)) {
-                        resultsArrays.push(parseActa(actaData, clubId, acta.roundName));
-                    }
+            for (let i = 0; i < actaIds.length; i += chunkSize) {
+                const chunk = actaIds.slice(i, i + chunkSize);
+                const startNum = i + 1;
+                const endNum = Math.min(i + chunkSize, actaIds.length);
+                showStatus(`Procesando actas ${startNum} a ${endNum} de ${actaIds.length}...`, 'info');
 
-                    // Delay between fetches to avoid spamming the current proxy and triggering Error 400
-                    if (i < actaIds.length - 1) {
-                        await new Promise(r => setTimeout(r, 600)); // 600ms delay
+                const chunkPromises = chunk.map(async (acta) => {
+                    try {
+                        const actaUrl = `${API_URL}?task=obtePartidesCalendari&resultats=true&idCalendari=${acta.id}`;
+                        const actaData = await fetchData(actaUrl);
+
+                        if (actaData && Array.isArray(actaData.partides)) {
+                            return parseActa(actaData, clubId, acta.roundName);
+                        }
+                    } catch (e) {
+                        console.error(`Error fetching acta ${acta.id}`, e);
                     }
-                } catch (e) {
-                    console.error(`Error fetching acta ${acta.id}`, e);
+                    return [];
+                });
+
+                const chunkResults = await Promise.all(chunkPromises);
+                resultsArrays.push(...chunkResults);
+
+                // Small delay between chunks to let proxies breathe
+                if (endNum < actaIds.length) {
+                    await new Promise(r => setTimeout(r, 300));
                 }
             }
 
