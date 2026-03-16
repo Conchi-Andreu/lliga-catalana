@@ -20,10 +20,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // List of CORS proxies to try in order
     const CORS_PROXIES = [
-        'https://api.allorigins.win/raw?url=',
-        'https://corsproxy.io/?',
-        'https://api.codetabs.com/v1/proxy?quest=',
-        'https://thingproxy.freeboard.io/fetch/'
+        { url: 'https://api.codetabs.com/v1/proxy?quest=', encode: true, jsonWrapper: false },
+        { url: 'https://cors.eu.org/', encode: false, jsonWrapper: false },
+        { url: 'https://api.allorigins.win/get?url=', encode: true, jsonWrapper: true }
     ];
 
     let currentProxyIndex = Math.floor(Math.random() * CORS_PROXIES.length);
@@ -255,13 +254,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         for (const proxy of proxiesToTry) {
             try {
-                triedProxies.push(proxy);
+                triedProxies.push(proxy.url);
 
                 // Add a timeout of 7 seconds to each proxy request
                 const controller = new AbortController();
                 const timeoutId = setTimeout(() => controller.abort(), 7000);
 
-                const response = await fetch(proxy + encodeURIComponent(targetUrl), {
+                const fetchUrl = proxy.url + (proxy.encode ? encodeURIComponent(targetUrl) : targetUrl);
+                const response = await fetch(fetchUrl, {
                     signal: controller.signal
                 });
 
@@ -271,9 +271,16 @@ document.addEventListener('DOMContentLoaded', () => {
                     throw new Error(`Status ${response.status}`);
                 }
 
-                // Try to parse JSON. If it fails (e.g. proxy returns HTML error page), 
-                // the catch block will trigger and try next proxy.
-                const data = await response.json();
+                let data = await response.json();
+
+                // If proxy wraps the response in a JSON object with a .contents string
+                if (proxy.jsonWrapper && data && data.contents) {
+                    try {
+                        data = JSON.parse(data.contents);
+                    } catch (err) {
+                        throw new Error("Invalid format in proxy contents");
+                    }
+                }
 
                 // Some proxies might return 200 OK but with an object containing an error message
                 if (data && data.error) {
@@ -284,7 +291,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } catch (error) {
                 const isTimeout = error.name === 'AbortError';
                 const isJsonError = error instanceof SyntaxError;
-                console.warn(`Failed to fetch via ${proxy}:`, isTimeout ? 'Timeout' : (isJsonError ? 'Invalid JSON' : error.message));
+                console.warn(`Failed to fetch via ${proxy.url}:`, isTimeout ? 'Timeout' : (isJsonError ? 'Invalid JSON' : error.message));
                 lastError = error;
             }
         }
