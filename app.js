@@ -26,8 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         'https://thingproxy.freeboard.io/fetch/'
     ];
 
-    // Shuffle proxies to avoid hitting the same one first every time
-    const SHUFFLED_PROXIES = [...CORS_PROXIES].sort(() => Math.random() - 0.5);
+    let currentProxyIndex = Math.floor(Math.random() * CORS_PROXIES.length);
 
     const KNOWN_CLUB_CODES = {
         "SANT MARTI": "SMA",
@@ -245,7 +244,16 @@ document.addEventListener('DOMContentLoaded', () => {
         let lastError;
         let triedProxies = [];
 
-        for (const proxy of SHUFFLED_PROXIES) {
+        // Build a fresh proxy list starting from the current index
+        const proxiesToTry = [];
+        for (let i = 0; i < CORS_PROXIES.length; i++) {
+            proxiesToTry.push(CORS_PROXIES[(currentProxyIndex + i) % CORS_PROXIES.length]);
+        }
+
+        // Advance the proxy index for the next call
+        currentProxyIndex = (currentProxyIndex + 1) % CORS_PROXIES.length;
+
+        for (const proxy of proxiesToTry) {
             try {
                 triedProxies.push(proxy);
 
@@ -421,22 +429,28 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // 3. Fetch details for each Acta IN PARALLEL
-            const actaPromises = actaIds.map(async (acta) => {
+            // 3. Fetch details for each Acta SEQUENTIALLY with proxy rotation and rate limit delay
+            const resultsArrays = [];
+            for (let i = 0; i < actaIds.length; i++) {
+                const acta = actaIds[i];
                 try {
+                    showStatus(`Procesando acta ${i + 1} de ${actaIds.length}... (${acta.roundName})`, 'info');
                     const actaUrl = `${API_URL}?task=obtePartidesCalendari&resultats=true&idCalendari=${acta.id}`;
                     const actaData = await fetchData(actaUrl);
 
                     if (actaData && Array.isArray(actaData.partides)) {
-                        return parseActa(actaData, clubId, acta.roundName);
+                        resultsArrays.push(parseActa(actaData, clubId, acta.roundName));
+                    }
+
+                    // Delay between fetches to avoid spamming the current proxy and triggering Error 400
+                    if (i < actaIds.length - 1) {
+                        await new Promise(r => setTimeout(r, 600)); // 600ms delay
                     }
                 } catch (e) {
                     console.error(`Error fetching acta ${acta.id}`, e);
                 }
-                return [];
-            });
+            }
 
-            const resultsArrays = await Promise.all(actaPromises);
             const allPlayerResults = resultsArrays.flat();
 
             renderResults(allPlayerResults, roundOpponents);
